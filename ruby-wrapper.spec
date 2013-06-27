@@ -3,10 +3,12 @@
 
 %define wrapper_doc_dir %{_root_datadir}/doc/%{name}-%{version}
 
+%global rubyabi 1.9.1
+
 Summary: Wrapper for %{scl_prefix} ruby.
 Name: %{?scl:%scl_prefix}ruby-wrapper
 Version: 0.0.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Group: Development/Languages
 License:  ASL 2.0 
 URL: https://github.com/maxamillion/ruby-wrapper
@@ -62,5 +64,7 @@ exit 1
 
 
 %changelog
+* Wed Jun 26 2013 Adam Miller <maxamillion@fedoraproject.org> - 0.0.1-2
+- Fix rubyabi 
 * Wed Jun 26 2013 Adam Miller <maxamillion@fedoraproject.org> - 0.0.1-1
 - First package of the ruby-wrapper
