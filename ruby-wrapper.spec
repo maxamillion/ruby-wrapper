@@ -8,7 +8,7 @@
 Summary: Wrapper for %{scl_prefix} ruby.
 Name: %{?scl:%scl_prefix}ruby-wrapper
 Version: 0.0.2
-Release: 3%{?dist}
+Release: 4%{?dist}
 Group: Development/Languages
 License:  ASL 2.0
 URL: https://github.com/maxamillion/ruby-wrapper
@@ -58,11 +58,14 @@ exit 1
 
 %{?scl:%{_root_bindir}/%{scl_prefix}ruby}
 %{?scl:%{_root_bindir}/%{scl_prefix}rake}
+%{?scl:%{_root_bindir}/%{scl_prefix}rails}
 
 
 %changelog
-* Wed Sep 18 2013 Sam Kottler <shk@redhat.com> -0.0.2-3
-* Add a rails wrapper
+* Fri Dec 6 2013 Sam Kottler <shk@redhat.com> - 0.0.2.-4
+- Ensure the rails wrapper gets properly installed
+* Wed Sep 18 2013 Sam Kottler <shk@redhat.com> - 0.0.2-3
+- Add a rails wrapper
 * Mon Sep 9 2013 Sam Kottler <shk@redhat.com> - 0.0.2-2
 - Move /usr/bin/ruby193-ruby-rake to /usr/bin/ruby193-rake
 * Mon Sep 9 2013 Sam Kottler <shk@redhat.com> - 0.0.2-1
